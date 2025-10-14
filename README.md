@@ -1,10 +1,267 @@
-# Cassanova
-# Online Casino Website Blueprint
-This document outlines the structure, features, and key pages for a modern, user-friendly, and secure online casino website.1. Core PrinciplesUser-Centric Design: The site must be intuitive, easy to navigate, and visually appealing on all devices (desktop, tablet, mobile).Security & Trust: Implement top-tier security measures to protect user data and financial transactions. Clearly display licensing and regulatory information to build trust.Responsible Gaming: Integrate responsible gaming features prominently, providing players with tools to control their gambling habits.Performance: Fast loading times for pages and games are crucial for a positive user experience.2. Website Structure & Key Pages2.1. HomepagePurpose: To attract new users, showcase top offers, and provide easy access to key sections.Key Elements:Hero Section: Large, dynamic banner displaying the main welcome bonus and other significant promotions.Game Highlights: A curated list of "Popular," "New," and "Featured" games with eye-catching thumbnails.Jackpot Ticker: A live ticker showing the current value of progressive jackpots.Call-to-Action (CTA) Buttons: Prominent "Sign Up" and "Log In" buttons.Navigation Bar: Sticky header with links to Games, Promotions, VIP, Banking, and Help.Footer: Links to About Us, Terms & Conditions, Privacy Policy, Responsible Gaming, and licensing information.2.2. Game LobbyPurpose: Allow users to easily browse, search, and launch games.Key Elements:Game Categories:Slots (with sub-categories: Classic, Video, Progressive Jackpots)Table Games (Blackjack, Roulette, Baccarat, Poker)Live Casino (Live Blackjack, Live Roulette, Game Shows)Video PokerSpecialty Games (Bingo, Keno, Scratch Cards)Search Bar: Powerful search functionality to find games by title.Filter & Sort Options: Filter by game provider, popularity, release date, or features (e.g., Megaways, Bonus Buy).Game Thumbnails: High-quality images for each game. Hovering over a thumbnail could show options like "Play for Real" and "Demo Play."2.3. Individual Game PagePurpose: To host the game itself and provide relevant information.Key Elements:Game Window: The primary area where the game is loaded and played.Game Information: A brief description of the game, its rules, RTP (Return to Player), and volatility.Related Games: A section suggesting similar games to the player.Favorite Button: An option for the user to add the game to their personal list of favorites.2.4. Promotions / Bonus PagePurpose: To display all available offers to attract and retain players.Key Elements:Welcome Bonus: Detailed breakdown of the new player offer.Ongoing Promotions: Cards for each promotion (e.g., Reload Bonuses, Free Spins, Cashback Offers).Bonus Terms: Each offer should have a clear and easily accessible link to its terms and conditions.Bonus Code Field: If applicable, a field to enter promotional codes.2.5. User Account & DashboardPurpose: A centralized hub for players to manage their account, finances, and gaming activity.Sections:My Profile: View and edit personal details, and upload verification documents (KYC).Cashier / Banking:Deposit: A simple form with various payment methods.Withdraw: A clear process for cashing out winnings.Transaction History: A detailed log of all deposits, withdrawals, and game wagers.My Bonuses: A section to view active bonuses, their progress, and bonus history.Responsible Gaming:Set deposit limits (daily, weekly, monthly).Set loss/wager limits.Set session time limits.Option for self-exclusion or taking a "cool-off" period.Messages/Notifications: An inbox for site announcements and personalized offers.2.6. Banking / Payments PagePurpose: A public-facing page detailing all available payment methods.Key Elements:Logos of Payment Providers: Visa, Mastercard, PayPal, Skrill, Neteller, Bitcoin, etc.Tables of Information: Clear tables showing deposit/withdrawal methods, processing times, and any associated fees or limits.Security Information: Reassurances about the security of transactions (e.g., SSL encryption).2.7. VIP / Loyalty ProgramPurpose: To reward loyal players and encourage continued play.Key Elements:Program Tiers: Explanation of the different VIP levels (e.g., Bronze, Silver, Gold, Platinum).Benefits: A clear breakdown of the perks for each tier, such as exclusive bonuses, faster withdrawals, personal account managers, etc.Progress Bar: A visual indicator for the player showing how close they are to the next level.3. Key Features & FunctionalityRegistration & Login:Simple, multi-step registration form.Secure login with options for two-factor authentication (2FA)."Forgot Password" functionality.Game Integration:Seamless API integration with multiple game providers (e.g., NetEnt, Microgaming, Evolution Gaming)."Demo Play" or "Play for Fun" mode for most games, allowing users to try them without wagering real money.Customer Support:Live Chat: 24/7 availability is ideal.Email Support: A dedicated support email address.FAQ Section: A comprehensive knowledge base covering common questions about accounts, bonuses, and payments.Mobile Responsiveness:A fully responsive design that works flawlessly on all screen sizes. No separate mobile app is required initially if the website is mobile-first.Admin Backend:Dashboard: Overview of key metrics (new users, deposits, GGR).User Management: Ability to view player data, manage accounts, and handle KYC verification.Game Management: Control over which games are displayed and in what categories.Bonus & Promotions Management: Create and manage all promotional offers.Reporting: Generate reports on financial performance and player activity.
+<div align="center">
 
-# Homepage Design & Layout
-This brief outlines the design and layout for the casino website's homepage.1. Above the Fold (First View)Header:Left: Casino Logo.Center: Main Navigation (Games, Live Casino, Promotions, VIP).Right: "Log In" and "Sign Up" buttons. The "Sign Up" button should be high-contrast.Hero Banner:Visuals: A dynamic, high-quality graphic or short video clip that is exciting and casino-themed but not overly cluttered.Text: Large, compelling headline announcing the Welcome Bonus (e.g., "Get a 200% Bonus up to $500 + 100 Free Spins!").CTA: A prominent "Join Now" button in the center of the banner.2. Below the FoldGame Lobby Preview:Layout: A horizontal scrolling section with tabs for "Popular," "New Games," and "Jackpots."Thumbnails: Each game thumbnail should be vibrant and show the game's title clearly. A "Play Now" button appears on hover.Promotions Section:Layout: A grid of 2-3 visually appealing cards, each highlighting a key promotion (e.g., "Weekly Cashback," "Friday Free Spins"). Each card has a "Learn More" link.Why Choose Us Section:Layout: A section with 3-4 icons and short text snippets highlighting key benefits:Fast Payouts: Icon of a stopwatch or lightning bolt.24/7 Support: Icon of a headset.Fully Licensed: Icon of a shield or official seal.Huge Game Selection: Icon of slot machine reels or playing cards.Live Jackpot Ticker:Layout: A full-width banner that shows 3-4 of the biggest progressive jackpot games, with their current prize pools ticking up in real-time.Footer:Layout: Multi-column layout.Column 1: Quick Links (Games, Promotions, etc.).Column 2: Help (FAQ, Contact Us, About Us).Column 3: Legal (Terms & Conditions, Privacy Policy, Responsible Gaming).Bottom Bar: Logos of payment providers and gambling licenses. Copyright information.3. Color Palette & TypographyPrimary Colors: Dark, sophisticated colors like deep blue, black, or charcoal to convey a premium feel.Accent Colors: Bright, energetic colors like gold, electric blue, or magenta for buttons, CTAs, and highlights to draw attention.Typography: Clean, modern, and highly legible sans-serif font (e.g., Inter, Lato, Montserrat).
+# 🎰 Cassanova Casino
 
-# User Journey & Flows. 
-New User Registration & First Deposit 
-Arrives on Homepage: User sees the welcome bonus in the hero banner.Clicks "Sign Up": A registration form modal appears.Fills Out Form:Step 1: Email, Password, Username.Step 2: Personal Details (Name, DOB, Address).Step 3: Agrees to T&Cs and confirms age.Email Verification: User receives an email to verify their account.First Login: After verification, the user is logged in and redirected to the deposit page.Makes First Deposit: The welcome bonus is automatically suggested. The user selects a payment method, enters the amount, and completes the transaction.Starts Playing: Funds and bonus are credited. The user is redirected to the game lobby to start playing.2. Existing User Gameplay SessionArrives on Homepage: User clicks "Log In."Enters Credentials: Logs into their account.Lands on Game Lobby: Sees new and popular games. They might have a notification about a new promotion.Navigates to Favorites: Clicks a "Favorites" tab to see their saved games.Plays a Game: Launches a slot game and plays for 15 minutes.Checks Dashboard: Navigates to their account dashboard to see their balance and active bonuses.Logs Out: Ends their session.3. Withdrawal ProcessNavigates to Account: User clicks on their profile/balance and goes to the "Cashier" section.Selects "Withdraw": Clicks the withdrawal tab.KYC Check: If the user has not yet verified their identity, they are prompted to upload documents (ID, proof of address). This is a one-time process.Enters Amount: Enters the amount they wish to withdraw.Selects Method: Chooses a withdrawal method (often must be the same as the deposit method).Confirms Request: Submits the withdrawal request.Receives Confirmation: Sees a "Request Pending" message on screen and receives an email confirmation. The funds are processed by the casino's finance team within the stated timeframe.
+### Modern Full-Stack Online Casino Platform
+
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20-339933?style=for-the-badge&logo=node.js)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-8-47A248?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06B6D4?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+
+[Features](#-key-features) • [Demo](#-demo) • [Quick Start](#-quick-start) • [Documentation](#-documentation) • [Contributing](#-contributing)
+
+</div>
+
+---
+
+## 📖 About
+
+**Cassanova Casino** is a cutting-edge, full-stack online casino platform designed as a demonstration of modern web development practices. Built with the latest technologies including Next.js 15, React 19, and MongoDB, this project showcases a complete casino website implementation with a professional UI/UX, robust backend API, and comprehensive feature set.
+
+> **⚠️ Important Note**: This is a demonstration project for educational purposes. For production deployment, ensure proper gaming licenses, payment integrations, and regulatory compliance.
+
+## ✨ Key Features
+
+### 🎮 Frontend Experience
+- **Modern UI/UX**: Beautiful, responsive design built with Tailwind CSS
+- **Dynamic Game Lobby**: Browse, filter, and search through game collections
+- **Live Jackpot Ticker**: Real-time progressive jackpot displays
+- **Promotional System**: Eye-catching promotion cards and welcome bonuses
+- **Responsive Design**: Seamless experience across desktop, tablet, and mobile
+
+### 🔐 Backend & Security
+- **JWT Authentication**: Secure user authentication and session management
+- **Password Security**: bcryptjs password hashing
+- **RESTful API**: Well-structured Express.js backend
+- **MongoDB Integration**: Efficient data management with Mongoose ODM
+- **Transaction Management**: Complete deposit/withdrawal system
+
+### 🎯 Casino Features
+- **User Management**: Registration, profiles, and KYC verification
+- **Game Catalog**: Comprehensive game database with metadata
+- **Promotions Engine**: Flexible promotion and bonus system
+- **Transaction History**: Complete audit trail of all transactions
+- **Responsible Gaming**: Deposit limits, loss limits, and self-exclusion options
+- **VIP System**: Multi-tier loyalty program
+- **Favorites**: Personal game collections
+
+## 🛠️ Technology Stack
+
+### Frontend
+- **Framework**: Next.js 15 with App Router
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS 4
+- **Language**: TypeScript 5
+- **Features**: Server-Side Rendering (SSR), Hot Reloading
+
+### Backend
+- **Runtime**: Node.js 20+
+- **Framework**: Express 5
+- **Database**: MongoDB 8 with Mongoose
+- **Authentication**: JSON Web Tokens (JWT)
+- **Security**: bcryptjs, CORS
+- **Language**: TypeScript 5
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 20 or higher
+- MongoDB (local installation or MongoDB Atlas)
+- npm or yarn package manager
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/GizzZmo/Cassanova.git
+cd Cassanova
+```
+
+2. **Setup Backend**
+```bash
+cd backend
+npm install
+cp .env.example .env
+# Edit .env with your MongoDB URI and JWT secret
+npm run dev
+```
+
+3. **Setup Frontend** (in a new terminal)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+4. **Access the Application**
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:5000
+
+For detailed setup instructions, see [QUICKSTART.md](QUICKSTART.md).
+
+## 📸 Demo
+
+### Homepage
+The homepage features a modern hero banner with welcome bonuses, game lobby preview, live jackpot ticker, and promotional cards.
+
+### Game Lobby
+Browse through categorized game collections with tabs for Popular, New Games, and Jackpots.
+
+### User Dashboard
+Complete account management with profile settings, transaction history, and responsible gaming controls.
+
+## 📚 Documentation
+
+- **[Quick Start Guide](QUICKSTART.md)** - Get up and running in minutes
+- **[Project Documentation](PROJECT_DOCUMENTATION.md)** - Comprehensive technical documentation
+- **[API Reference](docs/API_REFERENCE.md)** - Complete API endpoint documentation
+- **[Architecture](docs/ARCHITECTURE.md)** - System architecture and design patterns
+- **[Deployment Guide](docs/DEPLOYMENT.md)** - Production deployment instructions
+- **[Security Policy](docs/SECURITY.md)** - Security best practices and vulnerability reporting
+
+## 🏗️ Project Structure
+
+```
+Cassanova/
+├── frontend/              # Next.js frontend application
+│   ├── app/              # Next.js 15 app directory
+│   │   ├── layout.tsx    # Root layout
+│   │   ├── page.tsx      # Homepage
+│   │   └── globals.css   # Global styles
+│   ├── components/       # React components
+│   │   ├── layout/       # Header, Footer
+│   │   └── home/         # Homepage sections
+│   └── public/           # Static assets
+│
+├── backend/              # Express backend API
+│   └── src/
+│       ├── server.ts     # Express server
+│       ├── models/       # Mongoose models
+│       ├── routes/       # API routes
+│       ├── controllers/  # Request handlers
+│       └── middleware/   # Authentication middleware
+│
+└── docs/                 # Documentation
+```
+
+## 🔌 API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - User login
+- `GET /api/auth/verify/:token` - Email verification
+
+### Games
+- `GET /api/games` - List all games (with filters)
+- `GET /api/games/jackpots` - Get jackpot games
+- `GET /api/games/:slug` - Get game details
+
+### Users
+- `GET /api/users/profile` - Get user profile
+- `PUT /api/users/profile` - Update profile
+- `PUT /api/users/responsible-gaming` - Update gaming limits
+- `POST /api/users/favorites` - Toggle favorite game
+
+### Promotions
+- `GET /api/promotions` - List all promotions
+- `GET /api/promotions/:slug` - Get promotion details
+
+### Transactions
+- `GET /api/transactions` - Get transaction history
+- `POST /api/transactions/deposit` - Create deposit
+- `POST /api/transactions/withdrawal` - Create withdrawal
+
+For complete API documentation, see [API_REFERENCE.md](docs/API_REFERENCE.md).
+
+## 🧪 Testing
+
+```bash
+# Backend tests
+cd backend
+npm test
+
+# Frontend tests
+cd frontend
+npm test
+```
+
+## 🔒 Security
+
+Security is a top priority. We implement:
+- ✅ JWT-based authentication
+- ✅ Password hashing with bcryptjs
+- ✅ CORS protection
+- ✅ Input validation and sanitization
+- ✅ Secure transaction handling
+- ✅ KYC verification for withdrawals
+
+For security concerns, please see our [Security Policy](docs/SECURITY.md).
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](docs/CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📋 Roadmap
+
+### Short Term
+- [ ] User authentication pages (login, register)
+- [ ] Game detail pages
+- [ ] User dashboard implementation
+- [ ] Deposit/withdrawal pages
+- [ ] Promotion detail pages
+
+### Medium Term
+- [ ] Real payment provider integration
+- [ ] Email verification system
+- [ ] KYC document upload
+- [ ] Live chat support
+- [ ] Admin dashboard
+
+### Long Term
+- [ ] Real game provider integration
+- [ ] Live dealer games
+- [ ] Real-time notifications
+- [ ] Progressive jackpot tracking
+- [ ] Multi-language support
+- [ ] Mobile app development
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Educational & Demonstration Purposes Only**: This software is provided as-is for learning and demonstration. Production use requires proper gaming licenses, compliance with gambling regulations, and integration with licensed payment and gaming providers.
+
+## 👥 Authors
+
+- **GizzZmo** - *Initial work* - [GizzZmo](https://github.com/GizzZmo)
+
+## 🙏 Acknowledgments
+
+- Built with Next.js, React, and modern web technologies
+- Inspired by industry-leading online casino platforms
+- UI/UX design following best practices in gaming industry
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](https://github.com/GizzZmo/Cassanova/issues)
+- **Documentation**: [Project Docs](PROJECT_DOCUMENTATION.md)
+- **Email**: For private inquiries
+
+---
+
+<div align="center">
+
+**⭐ Star this repository if you find it helpful!**
+
+Made with ❤️ by [GizzZmo](https://github.com/GizzZmo)
+
+</div>
