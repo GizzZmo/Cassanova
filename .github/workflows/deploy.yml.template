@@ -1,0 +1,103 @@
+name: Deploy to Production
+
+# This is a template workflow for deployment
+# Rename to deploy.yml and configure secrets to enable
+# Remove this file or keep as reference
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test Before Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install Backend Dependencies
+        run: cd backend && npm ci
+      
+      - name: Build Backend
+        run: cd backend && npm run build
+      
+      - name: Install Frontend Dependencies
+        run: cd frontend && npm ci
+      
+      - name: Lint Frontend
+        run: cd frontend && npm run lint
+      
+      - name: Build Frontend
+        run: cd frontend && npm run build
+
+  deploy-backend:
+    name: Deploy Backend
+    needs: test
+    runs-on: ubuntu-latest
+    # Uncomment when ready to deploy
+    # if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      # Option 1: Deploy to server via SSH
+      # - name: Deploy to Server
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.SERVER_HOST }}
+      #     username: ${{ secrets.SERVER_USER }}
+      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     script: |
+      #       cd /var/www/Cassanova
+      #       git pull origin main
+      #       cd backend
+      #       npm ci --production
+      #       npm run build
+      #       pm2 restart cassanova-api
+      
+      # Option 2: Deploy to cloud platform
+      # Add your deployment steps here
+      
+      - name: Placeholder
+        run: echo "Configure deployment settings"
+
+  deploy-frontend:
+    name: Deploy Frontend
+    needs: test
+    runs-on: ubuntu-latest
+    # Uncomment when ready to deploy
+    # if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      # Option 1: Deploy to Vercel
+      # - name: Deploy to Vercel
+      #   uses: amondnet/vercel-action@v20
+      #   with:
+      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+      #     working-directory: ./frontend
+      
+      # Option 2: Deploy to Netlify
+      # - name: Deploy to Netlify
+      #   uses: nwtgck/actions-netlify@v2
+      #   with:
+      #     publish-dir: './frontend/.next'
+      #     production-branch: main
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     deploy-message: "Deploy from GitHub Actions"
+      #   env:
+      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      
+      - name: Placeholder
+        run: echo "Configure deployment settings"

@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend:
+    name: Backend Build & Validate
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: backend/package-lock.json
+      
+      - name: Install backend dependencies
+        run: cd backend && npm ci
+      
+      - name: Build backend
+        run: cd backend && npm run build
+      
+      - name: Check build output
+        run: |
+          if [ ! -d "backend/dist" ]; then
+            echo "Error: dist directory not created"
+            exit 1
+          fi
+          if [ ! -f "backend/dist/server.js" ]; then
+            echo "Error: server.js not found in dist"
+            exit 1
+          fi
+          echo "Backend build successful!"
+
+  frontend:
+    name: Frontend Build & Lint
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+      
+      - name: Install frontend dependencies
+        run: cd frontend && npm ci
+      
+      - name: Lint frontend
+        run: cd frontend && npm run lint
+      
+      - name: Build frontend
+        run: cd frontend && npm run build
+      
+      - name: Check build output
+        run: |
+          if [ ! -d "frontend/.next" ]; then
+            echo "Error: .next directory not created"
+            exit 1
+          fi
+          echo "Frontend build successful!"
