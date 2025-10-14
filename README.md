@@ -11,6 +11,10 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-8-47A248?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06B6D4?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
+[![CI](https://github.com/GizzZmo/Cassanova/actions/workflows/ci.yml/badge.svg)](https://github.com/GizzZmo/Cassanova/actions/workflows/ci.yml)
+[![Backend Build](https://img.shields.io/github/actions/workflow/status/GizzZmo/Cassanova/ci.yml?branch=main&label=Backend&logo=node.js)](https://github.com/GizzZmo/Cassanova/actions/workflows/ci.yml)
+[![Frontend Build](https://img.shields.io/github/actions/workflow/status/GizzZmo/Cassanova/ci.yml?branch=main&label=Frontend&logo=next.js)](https://github.com/GizzZmo/Cassanova/actions/workflows/ci.yml)
+
 [Features](#-key-features) • [Demo](#-demo) • [Quick Start](#-quick-start) • [Documentation](#-documentation) • [Contributing](#-contributing)
 
 </div>
