@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const user_controller_1 = require("../controllers/user.controller");
+const auth_middleware_1 = require("../middleware/auth.middleware");
+const router = (0, express_1.Router)();
+router.use(auth_middleware_1.authenticateToken);
+router.get('/profile', user_controller_1.getUserProfile);
+router.put('/profile', user_controller_1.updateUserProfile);
+router.put('/responsible-gaming', user_controller_1.updateResponsibleGaming);
+router.post('/favorites', user_controller_1.toggleFavoriteGame);
+exports.default = router;
