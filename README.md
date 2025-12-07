@@ -60,7 +60,8 @@
 - **Promotions Engine**: Flexible promotion and bonus system with eligibility rules
 - **VIP System**: Multi-tier loyalty program (Bronze, Silver, Gold, Platinum)
 - **Responsible Gaming**: Deposit limits, loss limits, and self-exclusion options
-- **Favorites**: Personal game collections (backend ready)
+- **Favorites**: Personal game collections (backend API implemented)
+- **Email Verification**: User email verification system (backend API implemented)
 
 ## 🛠️ Technology Stack
 
@@ -288,15 +289,23 @@ We welcome contributions! Please see our [Contributing Guidelines](docs/CONTRIBU
 - [x] Transaction history display
 - [x] KYC verification checks
 
+#### Phase 3: Backend Infrastructure (Completed)
+- [x] Email verification system (backend API)
+- [x] Favorite games management (backend API)
+- [x] Responsible gaming settings (backend API)
+- [x] KYC document storage (database model)
+- [x] JWT authentication with token validation
+- [x] Transaction processing (deposit/withdrawal)
+
 ### 🚀 Upcoming Features
 
 #### Short Term
-- [ ] Email verification system
+- [ ] Email verification UI flow (frontend integration)
 - [ ] Password reset functionality
-- [ ] KYC document upload interface
+- [ ] KYC document upload interface (frontend)
 - [ ] Two-factor authentication
 - [ ] Transaction filtering and search
-- [ ] Favorite games management UI
+- [ ] Favorite games management UI (frontend)
 
 #### Medium Term
 - [ ] Real payment provider integration
