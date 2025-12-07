@@ -247,6 +247,7 @@ For complete API documentation, see [API_REFERENCE.md](docs/API_REFERENCE.md).
 - `/register` - User registration page
 - `/games/[slug]` - Game detail pages (dynamic)
 - `/promotions/[slug]` - Promotion detail pages (dynamic)
+- `/demo` - Demo page
 
 ### Protected Routes (Require Authentication)
 - `/dashboard` - User dashboard with account overview and transactions
