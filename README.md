@@ -167,6 +167,7 @@ Cassanova/
 │   │   │   └── [slug]/   # Dynamic game detail pages
 │   │   ├── promotions/   # Promotion pages
 │   │   │   └── [slug]/   # Dynamic promotion detail pages
+│   │   ├── demo/         # Demo page
 │   │   └── globals.css   # Global styles
 │   ├── components/       # React components
 │   │   ├── layout/       # Header, Footer
@@ -181,8 +182,22 @@ Cassanova/
 │   └── src/
 │       ├── server.ts     # Express server
 │       ├── models/       # Mongoose models
+│       │   ├── User.ts
+│       │   ├── Game.ts
+│       │   ├── Promotion.ts
+│       │   └── Transaction.ts
 │       ├── routes/       # API routes
+│       │   ├── auth.routes.ts
+│       │   ├── game.routes.ts
+│       │   ├── promotion.routes.ts
+│       │   ├── transaction.routes.ts
+│       │   └── user.routes.ts
 │       ├── controllers/  # Request handlers
+│       │   ├── auth.controller.ts
+│       │   ├── game.controller.ts
+│       │   ├── promotion.controller.ts
+│       │   ├── transaction.controller.ts
+│       │   └── user.controller.ts
 │       └── middleware/   # Authentication middleware
 │
 └── docs/                 # Documentation
@@ -204,6 +219,7 @@ Cassanova/
 - `GET /api/games` - List all games (with filters)
 - `GET /api/games/jackpots` - Get jackpot games
 - `GET /api/games/:slug` - Get game details
+- `POST /api/games` - Create game (admin, requires authentication)
 
 ### Users
 - `GET /api/users/profile` - Get user profile
@@ -214,6 +230,7 @@ Cassanova/
 ### Promotions
 - `GET /api/promotions` - List all promotions
 - `GET /api/promotions/:slug` - Get promotion details
+- `POST /api/promotions` - Create promotion (admin, requires authentication)
 
 ### Transactions
 - `GET /api/transactions` - Get transaction history
