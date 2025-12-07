@@ -60,7 +60,8 @@
 - **Promotions Engine**: Flexible promotion and bonus system with eligibility rules
 - **VIP System**: Multi-tier loyalty program (Bronze, Silver, Gold, Platinum)
 - **Responsible Gaming**: Deposit limits, loss limits, and self-exclusion options
-- **Favorites**: Personal game collections (backend ready)
+- **Favorites**: Personal game collections (backend API implemented)
+- **Email Verification**: User email verification system (backend API implemented)
 
 ## 🛠️ Technology Stack
 
@@ -166,6 +167,7 @@ Cassanova/
 │   │   │   └── [slug]/   # Dynamic game detail pages
 │   │   ├── promotions/   # Promotion pages
 │   │   │   └── [slug]/   # Dynamic promotion detail pages
+│   │   ├── demo/         # Demo page
 │   │   └── globals.css   # Global styles
 │   ├── components/       # React components
 │   │   ├── layout/       # Header, Footer
@@ -180,8 +182,22 @@ Cassanova/
 │   └── src/
 │       ├── server.ts     # Express server
 │       ├── models/       # Mongoose models
+│       │   ├── User.ts
+│       │   ├── Game.ts
+│       │   ├── Promotion.ts
+│       │   └── Transaction.ts
 │       ├── routes/       # API routes
+│       │   ├── auth.routes.ts
+│       │   ├── game.routes.ts
+│       │   ├── promotion.routes.ts
+│       │   ├── transaction.routes.ts
+│       │   └── user.routes.ts
 │       ├── controllers/  # Request handlers
+│       │   ├── auth.controller.ts
+│       │   ├── game.controller.ts
+│       │   ├── promotion.controller.ts
+│       │   ├── transaction.controller.ts
+│       │   └── user.controller.ts
 │       └── middleware/   # Authentication middleware
 │
 └── docs/                 # Documentation
@@ -203,6 +219,7 @@ Cassanova/
 - `GET /api/games` - List all games (with filters)
 - `GET /api/games/jackpots` - Get jackpot games
 - `GET /api/games/:slug` - Get game details
+- `POST /api/games` - Create game (admin, requires authentication)
 
 ### Users
 - `GET /api/users/profile` - Get user profile
@@ -213,6 +230,7 @@ Cassanova/
 ### Promotions
 - `GET /api/promotions` - List all promotions
 - `GET /api/promotions/:slug` - Get promotion details
+- `POST /api/promotions` - Create promotion (admin, requires authentication)
 
 ### Transactions
 - `GET /api/transactions` - Get transaction history
@@ -229,6 +247,7 @@ For complete API documentation, see [API_REFERENCE.md](docs/API_REFERENCE.md).
 - `/register` - User registration page
 - `/games/[slug]` - Game detail pages (dynamic)
 - `/promotions/[slug]` - Promotion detail pages (dynamic)
+- `/demo` - Demo page
 
 ### Protected Routes (Require Authentication)
 - `/dashboard` - User dashboard with account overview and transactions
@@ -288,15 +307,23 @@ We welcome contributions! Please see our [Contributing Guidelines](docs/CONTRIBU
 - [x] Transaction history display
 - [x] KYC verification checks
 
+#### Phase 3: Backend Infrastructure (Completed)
+- [x] Email verification system (backend API)
+- [x] Favorite games management (backend API)
+- [x] Responsible gaming settings (backend API)
+- [x] KYC document storage (database model)
+- [x] JWT authentication with token validation
+- [x] Transaction processing (deposit/withdrawal)
+
 ### 🚀 Upcoming Features
 
 #### Short Term
-- [ ] Email verification system
+- [ ] Email verification UI flow (frontend integration)
 - [ ] Password reset functionality
-- [ ] KYC document upload interface
+- [ ] KYC document upload interface (frontend)
 - [ ] Two-factor authentication
 - [ ] Transaction filtering and search
-- [ ] Favorite games management UI
+- [ ] Favorite games management UI (frontend)
 
 #### Medium Term
 - [ ] Real payment provider integration
